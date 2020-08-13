@@ -47,7 +47,7 @@
                     color: #878d8d;
                     padding: 15px;
                     cursor: pointer;
-                    &:hover {
+                    &.is_active {
                         color: #fd735a;
                     }
                     @include screen-sm {

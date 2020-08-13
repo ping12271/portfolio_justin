@@ -596,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px;
   cursor: pointer;
 }
-.header .main-header nav ul li:hover {
+.header .main-header nav ul li.is_active {
   color: #fd735a;
 }
 @media only screen and (max-width: 768px) {
@@ -1223,6 +1223,9 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
   margin: 20px 0;
 }
+.section-contact .contact-touch .item a:hover {
+  text-decoration: none;
+}
 .section-contact .contact-touch .item h6 {
   font-weight: 700;
   font-size: 14px;
@@ -1278,7 +1281,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-top {
   position: fixed;
   bottom: -80px;
-  right: 50px;
+  right: 40px;
   width: 60px;
   height: 60px;
   z-index: 1000;

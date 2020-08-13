@@ -587,6 +587,9 @@
                 color: #333;
                 text-decoration: underline;
                 margin: 20px 0;
+                &:hover {
+                    text-decoration: none;
+                }
             }
             h6 {
                 font-weight: 700;
@@ -647,7 +650,7 @@
 .back-top {
     position: fixed;
     bottom: -80px;
-    right: 50px;
+    right: 40px;
     width: 60px;
     height: 60px;
     z-index: 1000;

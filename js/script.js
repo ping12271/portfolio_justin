@@ -55,6 +55,7 @@ const portfolio = {
 
     scrollTo: function () {
         $('.main-header li').on('click', function () {
+            $(this).addClass('is_active').siblings().removeClass('is_active');
             $('html').removeClass('open-side-menu');
             const menuIndex = $(this).index();
             const sectionOffset = $('.scroll').eq(menuIndex).offset();

@@ -897,17 +897,19 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   padding-left: 15px;
 }
-.section-resume .skills .item {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 2px;
-  padding: 20px;
+.section-resume .skills ul {
   transform: none;
+  border: 1px solid #eee;
 }
-.section-resume .skills .item:hover {
+.section-resume .skills ul:hover {
   transform: translateY(-5px);
   transition: 0.5s;
   box-shadow: 0 4px 8px rgba(134, 151, 168, 0.1);
+}
+.section-resume .skills .item {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
 }
 .section-resume .skills .item h5 {
   font-size: 14px;
@@ -957,12 +959,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .section-portfolio .portfolio-slide .item .thumb:hover img {
+  transform-origin: center;
   transform: scale(1.2);
   transition: 1s;
 }
 .section-portfolio .portfolio-slide .item .thumb img {
-  width: 398px;
+  width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 .section-portfolio .portfolio-slide .item .thumb .screen {
   position: absolute;

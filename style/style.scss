@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@import "variable";
 @import "utils/mixin";
 @import "utils/function";
 
@@ -11,8 +10,6 @@
 @import "layout/header";
 @import "layout/footer";
 
-@import "components/button";
-
-@import "pages/main";
+@import "pages/index";
 
 

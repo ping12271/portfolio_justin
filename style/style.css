@@ -460,73 +460,6 @@ body {
   padding: 0 15px;
 }
 
-.blind {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  width: 1px;
-  height: 1px;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
-}
-
-.por {
-  position: relative;
-}
-
-.poa {
-  position: absolute;
-}
-
-.pof {
-  position: fixed;
-}
-
-.dtb {
-  display: table;
-}
-
-.dtbc {
-  display: table-cell;
-}
-
-.vat {
-  vertical-align: top;
-}
-
-.vam {
-  vertical-align: middle;
-}
-
-.vab {
-  vertical-align: bottom;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .shadow-line {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #a5a5a5, rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
@@ -658,9 +591,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-home {
   position: relative;
-  background: url("../images/cover.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("../images/cover.jpg") 50%/cover no-repeat;
   height: 100vh;
   display: flex;
 }
@@ -771,6 +702,12 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 50%;
   }
 }
+@media only screen and (max-width: 542px) {
+  .section-service .service-contents ul li {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 .section-service .service-contents ul .item .thumb {
   position: relative;
   display: flex;
@@ -832,19 +769,20 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 542px) {
+  .section-resume .resume-contents {
+    flex-direction: column;
+  }
+}
+.section-resume .resume-contents ul li {
+  padding: 0 15px;
+}
 .section-resume .resume-contents h3 {
   font-size: 20px;
   color: #333;
   font-weight: 500;
-}
-.section-resume .resume-contents .experience ul {
-  padding-right: 15px;
-}
-.section-resume .resume-contents .education ul {
-  padding-left: 15px;
-}
-.section-resume .resume-contents .education h3 {
-  padding-left: 15px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
 .section-resume .resume-contents .item {
   padding: 24px;
@@ -883,28 +821,33 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 542px) {
+  .section-resume .skills {
+    flex-direction: column;
+  }
+}
 .section-resume .skills h3 {
   font-size: 20px;
   color: #333;
   font-weight: 500;
-  margin: 16px 0;
+  margin: 16px 0 16px 15px;
 }
 .section-resume .skills .design-skill {
   flex: 1;
-  padding-right: 15px;
 }
 .section-resume .skills .coding-skill {
   flex: 1;
-  padding-left: 15px;
 }
 .section-resume .skills ul {
   transform: none;
-  border: 1px solid #eee;
 }
 .section-resume .skills ul:hover {
   transform: translateY(-5px);
   transition: 0.5s;
   box-shadow: 0 4px 8px rgba(134, 151, 168, 0.1);
+}
+.section-resume .skills ul li {
+  padding: 0 15px;
 }
 .section-resume .skills .item {
   background-color: #fff;

@@ -95,6 +95,7 @@ const portfolio = {
                 },
             ]
         });
+
         $('.portfolio-slide').slick({
             infinite: true,
             slidesToShow: 3,
@@ -120,7 +121,7 @@ const portfolio = {
         });
     }
 
-}
+};
 
 
 

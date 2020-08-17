@@ -19,9 +19,7 @@
 }
 .section-home {
     position: relative;
-    background: url('../images/cover.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('../images/cover.jpg') 50% / cover no-repeat;
     height: 100vh;
     display: flex;
     .black {
@@ -126,6 +124,10 @@
                     flex: 1 1 50%;
                     max-width: 50%;
                 }
+                @include screen-xs {
+                    flex: 100%;
+                    max-width: 100%;
+                }
             }
             .item {
                 .thumb {
@@ -191,19 +193,20 @@
     .resume-contents {
         display: flex;
         justify-content: space-between;
+        @include screen-xs {
+            flex-direction: column;
+        }
+        ul {
+            li {
+                padding: 0 15px;
+            }
+        }
         h3 {
             font-size: 20px;
             color: #333;
             font-weight: 500;
-        }
-        .experience ul {
-            padding-right: 15px;
-        }
-        .education ul {
-            padding-left: 15px;
-        }
-        .education h3 {
-            padding-left: 15px;
+            margin-top: 20px;
+            margin-left: 15px;
         }
         .item {
             padding: 24px;
@@ -243,27 +246,30 @@
         padding-top: 20px;
         display: flex;
         justify-content: space-between;
+        @include screen-xs {
+            flex-direction: column;
+        }
         h3 {
             font-size: 20px;
             color: #333;
             font-weight: 500;
-            margin: 16px 0;
+            margin: 16px 0 16px 15px;
         }
         .design-skill {
             flex: 1;
-            padding-right: 15px;
         }
         .coding-skill {
             flex: 1;
-            padding-left: 15px;
         }
         ul {
             transform: none;
-            border: 1px solid #eee;
             &:hover {
                 transform: translateY(-5px);
                 transition: .5s;
                 box-shadow: 0 4px 8px rgba(134, 151, 168, 0.1);
+            }
+            li {
+                padding: 0 15px;
             }
         }
         .item {

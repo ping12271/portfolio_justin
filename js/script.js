@@ -10,7 +10,6 @@ const portfolio = {
         portfolio.scrollTo();
         portfolio.slide();
         portfolio.dataFade();
-        portfolio.AOS();
     },
 
     handleSideMenu: function () {
@@ -135,10 +134,6 @@ const portfolio = {
                 }
             })
         })
-    },
-
-    AOS: function () {
-        AOS.init();
     }
 
 };

@@ -9,6 +9,8 @@ const portfolio = {
         portfolio.backTop();
         portfolio.scrollTo();
         portfolio.slide();
+        portfolio.dataFade();
+        portfolio.AOS();
     },
 
     handleSideMenu: function () {
@@ -119,6 +121,24 @@ const portfolio = {
                 },
             ]
         });
+    },
+
+    dataFade: function () {
+        $(window).on('scroll', function () {
+            const sct = $(this).scroll.top();
+            $("[data-fade]").each(function () {
+                const oft = $(this).offset.top();
+                if(sct > oft-150) {
+                    $(this).addClass('on')
+                } else {
+                    $(this).removeClass('on')
+                }
+            })
+        })
+    },
+
+    AOS: function () {
+        AOS.init();
     }
 
 };
